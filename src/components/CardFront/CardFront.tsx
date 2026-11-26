@@ -4,6 +4,7 @@ import type { Card } from '../../types';
 type CardFrontProps = {
   card: Card;
   onDetails?: () => void;
+  onDeleteCard: (cardId: string) => void;
 };
 
 const categoryLabels: Record<Card['category'], string> = {
@@ -13,7 +14,7 @@ const categoryLabels: Record<Card['category'], string> = {
   air: 'Воздух',
 };
 
-function CardFront({ card, onDetails }: CardFrontProps) {
+function CardFront({ card, onDetails, onDeleteCard }: CardFrontProps) {
   return (
     <div className="card-front">
       <div className="card-image-wrap">
@@ -32,7 +33,18 @@ function CardFront({ card, onDetails }: CardFrontProps) {
             >
               ★
             </button>
-            <button type="button" className="icon-btn delete-btn" aria-label="Удалить карточку">
+            <button
+              type="button"
+              className="icon-btn delete-btn"
+              onClick={() => {
+                const confirmed = window.confirm(`Удалить карточку «${card.title}»?`);
+
+                if (confirmed) {
+                  onDeleteCard(card.id);
+                }
+              }}
+              aria-label="Удалить карточку"
+            >
               ✕
             </button>
           </div>

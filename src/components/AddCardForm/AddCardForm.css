@@ -49,6 +49,14 @@
   width: 100%;
 }
 
+.not-open{
+  display: none;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
 @media (min-width: 720px) {
   .form-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
