@@ -10,7 +10,7 @@ export const initialCards: Card[] = [
       'Дух огня, рождающийся из пепла. Его пламя согревает союзников и отпугивает врагов.',
     category: 'fire',
     stats: { power: 88, defense: 42, speed: 76, rarity: 'legendary' },
-    isFavorite: true,
+    isFavorite: false,
   },
   {
     id: 'card-2',
@@ -32,7 +32,7 @@ export const initialCards: Card[] = [
       'Древний голем горных вершин. Медлителен, но его защита почти непробиваема.',
     category: 'earth',
     stats: { power: 72, defense: 95, speed: 24, rarity: 'rare' },
-    isFavorite: true,
+    isFavorite: false,
   },
   {
     id: 'card-4',
