@@ -37,6 +37,16 @@ function App() {
     )
   }
 
+  const handleToggleFavorite = (cardId: string) => {
+  setCards((prevCards) =>
+    prevCards.map((card) =>
+      card.id === cardId
+        ? { ...card, isFavorite: !card.isFavorite }
+        : card
+    )
+  );
+};
+
   return (
     <div className="app">
       <header className="app-header">
@@ -52,7 +62,7 @@ function App() {
       <main className="app-main">
         <section className="catalog-section">
           <h2>Карточки</h2>
-          <CardGrid cards={cards} onDeleteCard={handleDeleteCard}/>
+          <CardGrid cards={cards} onDeleteCard={handleDeleteCard} onToggleFavorite={handleToggleFavorite} />
         </section>
 
         <section className="form-section">

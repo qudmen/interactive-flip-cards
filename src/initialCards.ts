@@ -32,7 +32,7 @@ export const initialCards: Card[] = [
       'Древний голем горных вершин. Медлителен, но его защита почти непробиваема.',
     category: 'earth',
     stats: { power: 72, defense: 95, speed: 24, rarity: 'rare' },
-    isFavorite: false,
+    isFavorite: true,
   },
   {
     id: 'card-4',

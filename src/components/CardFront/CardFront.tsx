@@ -5,6 +5,7 @@ type CardFrontProps = {
   card: Card;
   onDetails?: () => void;
   onDeleteCard: (cardId: string) => void;
+  onToggleFavorite: (cardId: string) => void;
 };
 
 const categoryLabels: Record<Card['category'], string> = {
@@ -14,7 +15,7 @@ const categoryLabels: Record<Card['category'], string> = {
   air: 'Воздух',
 };
 
-function CardFront({ card, onDetails, onDeleteCard }: CardFrontProps) {
+function CardFront({ card, onDetails, onDeleteCard, onToggleFavorite }: CardFrontProps) {
   return (
     <div className="card-front">
       <div className="card-image-wrap">
@@ -28,6 +29,7 @@ function CardFront({ card, onDetails, onDeleteCard }: CardFrontProps) {
             <button
               type="button"
               className={`icon-btn favorite-btn ${card.isFavorite ? 'active' : ''}`}
+              onClick={() => onToggleFavorite(card.id)}
               aria-label={card.isFavorite ? 'Убрать из избранного' : 'Добавить в избранное'}
               aria-pressed={card.isFavorite}
             >
