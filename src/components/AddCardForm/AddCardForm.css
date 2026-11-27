@@ -1,0 +1,73 @@
+.add-card-form {
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field span:first-child {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--text);
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field-error {
+  min-height: 1.1em;
+  font-size: 0.8rem;
+  color: var(--danger);
+}
+
+.submit-btn {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.not-open{
+  display: none;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+@media (min-width: 720px) {
+  .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .field-full {
+    grid-column: 1 / -1;
+  }
+
+  .submit-btn {
+    width: auto;
+    min-width: 220px;
+  }
+}

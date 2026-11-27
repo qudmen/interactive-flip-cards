@@ -1,0 +1,53 @@
+.card-back {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.card-back-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: auto;
+}
+
+.card-description {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.stats-block h4 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+}
+
+.stats-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.stats-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px;
+  background: #f7f8fc;
+  border-radius: 10px;
+}
+
+.stats-list span {
+  color: var(--muted);
+}
+
+.back-btn {
+  margin-top: auto;
+}
